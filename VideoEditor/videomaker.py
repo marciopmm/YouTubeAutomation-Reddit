@@ -106,6 +106,9 @@ def make_final_video(
     image_concat.close()
 
     subreddit = reddit_id
+    
+    if (~exists('./Results')):
+        os.mkdir('./Results')
 
     final.write_videofile(
         f"./Results/{subreddit}.mp4",
